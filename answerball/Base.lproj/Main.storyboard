@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="answerball" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starry-sky" translatesAutoresizingMaskIntoConstraints="NO" id="AOg-Y8-uqb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="bH7-Mf-0cA"/>
+                                    <constraint firstAttribute="width" constant="375" id="sxx-d2-Dks"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake phone to get answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTb-rh-KPE">
+                                <rect key="frame" x="16" y="20" width="343" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8ball.png" translatesAutoresizingMaskIntoConstraints="NO" id="I3u-Oz-8dV">
+                                <rect key="frame" x="25" y="171" width="325" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="QOc-dv-CTP"/>
+                                    <constraint firstAttribute="width" constant="325" id="bbn-rb-3l9"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivj-SG-Cst">
+                                <rect key="frame" x="97" y="263" width="181" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Jap-CI-GqB"/>
+                                    <constraint firstAttribute="width" constant="181" id="fEQ-SK-GBj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXC-ZS-SDN">
+                                <rect key="frame" x="130" y="617" width="114" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Get Answer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getAnswerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DCq-Gv-rbz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="I3u-Oz-8dV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3v2-gI-nPe"/>
+                            <constraint firstItem="Ivj-SG-Cst" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="46W-f4-bmv"/>
+                            <constraint firstItem="I3u-Oz-8dV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="66n-jx-Skh"/>
+                            <constraint firstItem="AOg-Y8-uqb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AYe-gw-Dll"/>
+                            <constraint firstItem="AOg-Y8-uqb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D01-Lk-cxg"/>
+                            <constraint firstItem="AOg-Y8-uqb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iqt-7s-3lx"/>
+                            <constraint firstItem="I3u-Oz-8dV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L7W-Xz-G4v"/>
+                            <constraint firstItem="GTb-rh-KPE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Puy-fz-hXx"/>
+                            <constraint firstItem="GTb-rh-KPE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TmK-m2-qTB"/>
+                            <constraint firstItem="AOg-Y8-uqb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eXA-ID-3gA"/>
+                            <constraint firstItem="Ivj-SG-Cst" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mwm-ib-E8v"/>
+                            <constraint firstItem="I3u-Oz-8dV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nO7-f8-Wbz"/>
+                            <constraint firstItem="GTb-rh-KPE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qtD-z1-ng2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerText" destination="Ivj-SG-Cst" id="xSz-UX-dyX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.5" y="138.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="8ball.png" width="690" height="689"/>
+        <image name="starry-sky" width="415" height="640"/>
+    </resources>
 </document>

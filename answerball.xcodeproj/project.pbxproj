@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4EB127301E37CE5D00E41BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB1272F1E37CE5D00E41BE5 /* AppDelegate.swift */; };
-		4EB127321E37CE5D00E41BE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB127311E37CE5D00E41BE5 /* ViewController.swift */; };
 		4EB127351E37CE5D00E41BE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB127331E37CE5D00E41BE5 /* Main.storyboard */; };
 		4EB127371E37CE5D00E41BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB127361E37CE5D00E41BE5 /* Assets.xcassets */; };
 		4EB1273A1E37CE5D00E41BE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB127381E37CE5D00E41BE5 /* LaunchScreen.storyboard */; };
+		4EB127421E37CF6C00E41BE5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB127411E37CF6C00E41BE5 /* MainVC.swift */; };
+		4EB127491E37D67A00E41BE5 /* 8ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EB127481E37D67A00E41BE5 /* 8ball.png */; };
+		4EB1274B1E37DCC800E41BE5 /* starry-sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EB1274A1E37DCC800E41BE5 /* starry-sky.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4EB1272C1E37CE5D00E41BE5 /* answerball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = answerball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB1272F1E37CE5D00E41BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4EB127311E37CE5D00E41BE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EB127341E37CE5D00E41BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EB127361E37CE5D00E41BE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EB127391E37CE5D00E41BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB1273B1E37CE5D00E41BE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EB127411E37CF6C00E41BE5 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		4EB127481E37D67A00E41BE5 /* 8ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8ball.png; path = ../../../Downloads/8ball.png; sourceTree = "<group>"; };
+		4EB1274A1E37DCC800E41BE5 /* starry-sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "starry-sky.jpg"; path = "../../../Downloads/starry-sky.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,24 @@
 		4EB1272E1E37CE5D00E41BE5 /* answerball */ = {
 			isa = PBXGroup;
 			children = (
-				4EB1272F1E37CE5D00E41BE5 /* AppDelegate.swift */,
-				4EB127311E37CE5D00E41BE5 /* ViewController.swift */,
+				4EB127431E37CFC700E41BE5 /* Supporting Files */,
 				4EB127331E37CE5D00E41BE5 /* Main.storyboard */,
-				4EB127361E37CE5D00E41BE5 /* Assets.xcassets */,
-				4EB127381E37CE5D00E41BE5 /* LaunchScreen.storyboard */,
-				4EB1273B1E37CE5D00E41BE5 /* Info.plist */,
+				4EB127411E37CF6C00E41BE5 /* MainVC.swift */,
 			);
 			path = answerball;
+			sourceTree = "<group>";
+		};
+		4EB127431E37CFC700E41BE5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EB127361E37CE5D00E41BE5 /* Assets.xcassets */,
+				4EB127481E37D67A00E41BE5 /* 8ball.png */,
+				4EB1274A1E37DCC800E41BE5 /* starry-sky.jpg */,
+				4EB1273B1E37CE5D00E41BE5 /* Info.plist */,
+				4EB1272F1E37CE5D00E41BE5 /* AppDelegate.swift */,
+				4EB127381E37CE5D00E41BE5 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +140,8 @@
 				4EB1273A1E37CE5D00E41BE5 /* LaunchScreen.storyboard in Resources */,
 				4EB127371E37CE5D00E41BE5 /* Assets.xcassets in Resources */,
 				4EB127351E37CE5D00E41BE5 /* Main.storyboard in Resources */,
+				4EB1274B1E37DCC800E41BE5 /* starry-sky.jpg in Resources */,
+				4EB127491E37D67A00E41BE5 /* 8ball.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EB127321E37CE5D00E41BE5 /* ViewController.swift in Sources */,
 				4EB127301E37CE5D00E41BE5 /* AppDelegate.swift in Sources */,
+				4EB127421E37CF6C00E41BE5 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
